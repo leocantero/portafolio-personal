@@ -4,7 +4,10 @@ export const ContactForm = () => {
   const FORMSPREE_URL = import.meta.env.VITE_FORMSPREE_URL;
 
   return (
-    <section className="max-w-9/12 mx-auto px-4 py-16 flex row justify-between items-top gap-16">
+    <section
+      id="contacto"
+      className="max-w-9/12 mx-auto px-4 py-16 flex row justify-between items-top gap-16"
+    >
       {/* Columna Izquierda: Información */}
       <div className="md:w-1/4">
         <h2 className="text-4xl font-bold montserrat-title-bold uppercase w-5xl mb-4">

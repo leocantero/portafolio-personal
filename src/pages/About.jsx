@@ -97,8 +97,6 @@ export const About = () => {
           </ol>
         </div>
       </section>
-
-      <ContactForm />
     </>
   );
 };

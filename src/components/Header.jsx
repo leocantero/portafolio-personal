@@ -23,7 +23,13 @@ export const Header = () => {
         <li className="cursor-pointer hover:text-(--acento-color) transition-all duration-300 ease-in-out hover:drop-shadow-[0_0_10px_rgba(255,255,255,0.8)]">
           Proyectos
         </li>
-        <li className="cursor-pointer hover:text-(--acento-color) transition-all duration-300 ease-in-out hover:drop-shadow-[0_0_10px_rgba(255,255,255,0.8)]">
+        <li
+          className="cursor-pointer hover:text-(--acento-color) transition-all duration-300 ease-in-out hover:drop-shadow-[0_0_10px_rgba(255,255,255,0.8)]"
+          onClick={() => {
+            const seccion = document.getElementById("contacto");
+            seccion?.scrollIntoView({ behavior: "smooth" });
+          }}
+        >
           Contacto
         </li>
       </ul>
