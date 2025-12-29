@@ -1,4 +1,5 @@
 import React from "react";
+import { ContactForm } from "../components/ContactForm.jsx";
 import { habilidades } from "../data/data.js";
 import { experiencia } from "../data/data.js";
 import aboutImage from "../assets/about-image.jpg";
@@ -37,12 +38,15 @@ export const About = () => {
         </div>
       </section>
 
-      <section className="mx-auto max-w-6xl px-4 py-16 border-b-2 border-white/10 mb-8">
+      <section
+        id="habilidades"
+        className="mx-auto max-w-6xl px-4 py-16 border-b-2 border-white/10 mb-8"
+      >
         <div className="grid gap-8 md:grid-cols-3 md:items-start">
           <h2 className="text-4xl font-bold montserrat-title-bold uppercase">
-            Mis Habilidades
+            Habilidades
           </h2>
-          <div id="habilidades" className="md:col-span-2">
+          <div className="md:col-span-2">
             <p className="text-sm text-(--text-color-secondary) mb-4">
               Siempre estoy buscando aprender nuevas habilidades y mantenerme
               actualizado con las tendencias de la industria. Algunas de mis
@@ -51,7 +55,7 @@ export const About = () => {
             <ul className="grid grid-cols-4 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-5 gap-3">
               {habilidades.map((habilidad, index) => (
                 <li key={`${habilidad}-${index}`}>
-                  <div className="group flex items-center justify-center gap-2 rounded-xl border border-white/5 ring-1 ring-white/10 px-3 py-2 md:px-4 md:py-3 transition-all duration-200 hover:bg-white/10 hover:ring-[var(--acento-color)] hover:-translate-y-0.5">
+                  <div className="group flex items-center justify-center gap-2 rounded-xl border border-white/5 ring-1 ring-white/10 px-3 py-2 md:px-4 md:py-3 transition-all duration-200 hover:bg-white/10 hover:ring-(--acento-color) hover:-translate-y-0.5">
                     <svg
                       xmlns="http://www.w3.org/2000/svg"
                       viewBox="0 0 24 24"
@@ -69,10 +73,10 @@ export const About = () => {
           </div>
         </div>
       </section>
-	  
-      <section className="max-w-9/12 mx-auto px-4 py-16 flex row justify-between items-top gap-16 ">
+
+      <section className="max-w-9/12 mx-auto px-4 py-16 flex row justify-between items-top gap-16 border-b-2 border-white/10 mb-8">
         <h2 className="text-4xl font-bold montserrat-title-bold uppercase w-5xl">
-          Mi Experiencia
+          Experiencia
         </h2>
         <div>
           <ol>
@@ -93,6 +97,8 @@ export const About = () => {
           </ol>
         </div>
       </section>
+
+      <ContactForm />
     </>
   );
 };
