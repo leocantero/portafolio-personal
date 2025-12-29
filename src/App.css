@@ -1,36 +1,35 @@
 @import "tailwindcss";
-@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;700&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;700&display=swap");
 
 #root {
-    /* Paleta de colores */
+  /* Paleta de colores */
   --background-color-primary: #010101;
   --background-color-secondary: #121212;
   --surface-color: #1e1e1e;
   --acento-color: #93b94c;
   --text-color: #ffffff;
-  --text-color-secondary: #888888;
+  --text-color-secondary: #bbbbbb;
 
   /* Otras variables */
   --radius: 6px;
   --shadow-hover: 0 4px 20px rgba(252, 252, 252, 0.5);
 }
 
-
-.montserrat-title{
+.montserrat-title {
   font-family: "Montserrat", sans-serif;
   font-optical-sizing: auto;
   font-weight: 400;
   font-style: normal;
 }
 
-.montserrat-title-bold{
+.montserrat-title-bold {
   font-family: "Montserrat", sans-serif;
   font-optical-sizing: auto;
   font-weight: 700;
   font-style: normal;
 }
 
-.monserrat-title-light{
+.monserrat-title-light {
   font-family: "Montserrat", sans-serif;
   font-optical-sizing: auto;
   font-weight: 300;
