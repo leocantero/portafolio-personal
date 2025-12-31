@@ -6,13 +6,13 @@ export const Header = () => {
   const navigate = useNavigate();
 
   return (
-    <header className="w-full flex row justify-between items-center cointainer mx-auto px-4 py-4">
-      <h1
-        className="cursor-pointer text-xl font-bold montserrat-title-light uppercase"
+    <header className="w-full flex row justify-between items-center cointainer mx-auto px-20 py-4">
+      <h2
+        className="cursor-pointer text-xl font-bold montserrat-title-bold uppercase"
         onClick={() => navigate("/")}
       >
         {nombre}
-      </h1>
+      </h2>
       <ul className="flex row gap-8">
         <li
           className="cursor-pointer hover:text-(--acento-color) transition-all duration-300 ease-in-out hover:drop-shadow-[0_0_10px_rgba(255,255,255,0.8)]"
