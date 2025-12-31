@@ -32,3 +32,17 @@ const experiencia = [
 ];
 
 export { experiencia };
+
+
+const links_contacto = {
+  github: "https://github.com",
+  linkedin: "https://linkedin.com",
+};
+
+export { links_contacto };
+
+const links_proyectos = {
+  proyecto1: "",
+}
+
+export { links_proyectos };
