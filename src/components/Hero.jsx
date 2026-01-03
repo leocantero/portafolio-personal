@@ -15,11 +15,11 @@ export const Hero = () => {
 
         {/* TEXTO */}
         <div>
-          <h2 className="text-5xl md:text-7xl font-bold mb-4 uppercase">
+          <h2 className="text-5xl font-bold mb-4 uppercase">
             Hola, soy {nombre}.
           </h2>
 
-          <p className="text-xl md:text-2xl mb-8 max-w-xl">
+          <p className="">
             Pequeña introducción sobre mí y lo que hago.
           </p>
 

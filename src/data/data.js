@@ -33,7 +33,6 @@ const experiencia = [
 
 export { experiencia };
 
-
 const links_contacto = {
   github: "https://github.com",
   linkedin: "https://linkedin.com",
@@ -43,18 +42,27 @@ export { links_contacto };
 
 const links_proyectos = {
   proyecto1: "",
-}
+};
 
 export { links_proyectos };
 
 const proyectos = [
   {
-    title: "Proyecto Uno",
-    description: "Descripción breve del Proyecto Uno.",
-    image: "/images/proyecto1.png",
+    title: "MetaMapa",
+    description: "El sistema donde cada hecho cuenta",
+    image: "/assets/img/projects/metamapa.png",
     link: "/projects/proyecto1",
     github: "https://github.com",
-  }
+    tecnologies: ["java","springboot","mysql","hibernate","html5","css3", "github", "thymeleaf",],
+  },
+  {
+    title: "Otro Proyecto",
+    description: "Descripción breve del Proyecto Uno.",
+    image: "/assets/img/projects/metamapa.png",
+    link: "/projects/proyecto1",
+    github: "https://github.com",
+    tecnologies: ["react", "css3", "html5", "git", "javascript", "typescript"],
+  },
 ];
 
 export { proyectos };
