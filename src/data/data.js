@@ -46,3 +46,15 @@ const links_proyectos = {
 }
 
 export { links_proyectos };
+
+const proyectos = [
+  {
+    title: "Proyecto Uno",
+    description: "Descripción breve del Proyecto Uno.",
+    image: "/images/proyecto1.png",
+    link: "/projects/proyecto1",
+    github: "https://github.com",
+  }
+];
+
+export { proyectos };
