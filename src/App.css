@@ -11,6 +11,7 @@
   --acento-color-hover: #a6ce5f;
   --text-color: #ffffff;
   --text-color-secondary: #bbbbbb;
+  --button-color: #424242;
 
   /* Otras variables */
   --radius: 6px;
@@ -36,4 +37,13 @@
   font-optical-sizing: auto;
   font-weight: 300;
   font-style: normal;
+}
+
+section {
+  padding-top: 15px;
+  padding-bottom: 15px;
+}
+
+html,body{
+  overflow-x: hidden;
 }

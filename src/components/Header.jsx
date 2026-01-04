@@ -14,15 +14,43 @@ export const Header = () => {
         {nombre}
       </h2>
       <ul className="flex row gap-8">
-        <li
-          className="cursor-pointer hover:text-(--acento-color) transition-all duration-300 ease-in-out hover:drop-shadow-[0_0_10px_rgba(255,255,255,0.8)]"
-          onClick={() => navigate("/about")}
+        <li className="cursor-pointer hover:text-(--acento-color) transition-all duration-300 ease-in-out hover:drop-shadow-[0_0_10px_rgba(255,255,255,0.8)]"
+            onClick={() => {
+            const seccion = document.getElementById("aboutPreview");
+            seccion?.scrollIntoView({ behavior: "smooth" });
+            }}
         >
-          Acerca de mí
+          Acerca de mi
         </li>
-        <li className="cursor-pointer hover:text-(--acento-color) transition-all duration-300 ease-in-out hover:drop-shadow-[0_0_10px_rgba(255,255,255,0.8)]">
+
+        
+        <li className="cursor-pointer hover:text-(--acento-color) transition-all duration-300 ease-in-out hover:drop-shadow-[0_0_10px_rgba(255,255,255,0.8)]"
+            onClick={() => {
+            const seccion = document.getElementById("experiencia");
+            seccion?.scrollIntoView({ behavior: "smooth" });
+            }}
+        >
+          Experiencia
+        </li>
+
+        <li className="cursor-pointer hover:text-(--acento-color) transition-all duration-300 ease-in-out hover:drop-shadow-[0_0_10px_rgba(255,255,255,0.8)]"
+            onClick={() => {
+            const seccion = document.getElementById("proyectos");
+            seccion?.scrollIntoView({ behavior: "smooth" });
+            }}
+        >
           Proyectos
         </li>
+
+        <li className="cursor-pointer hover:text-(--acento-color) transition-all duration-300 ease-in-out hover:drop-shadow-[0_0_10px_rgba(255,255,255,0.8)]"
+            onClick={() => {
+            const seccion = document.getElementById("habilidades");
+            seccion?.scrollIntoView({ behavior: "smooth" });
+            }}
+        >
+          Habilidades
+        </li>
+
         <li
           className="cursor-pointer hover:text-(--acento-color) transition-all duration-300 ease-in-out hover:drop-shadow-[0_0_10px_rgba(255,255,255,0.8)]"
           onClick={() => {

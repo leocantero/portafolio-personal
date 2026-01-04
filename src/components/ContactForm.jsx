@@ -1,4 +1,5 @@
 import React from "react";
+import { info_personal } from "../data/data";
 
 export const ContactForm = () => {
   const FORMSPREE_URL = import.meta.env.VITE_FORMSPREE_URL;
@@ -6,7 +7,7 @@ export const ContactForm = () => {
   return (
     <section
       id="contacto"
-      className="max-w-9/12 mx-auto px-4 py-16 flex row justify-between items-top gap-16"
+      className="max-w-9/12 mx-auto px-4 flex row justify-between items-top gap-16 "
     >
       {/* Columna Izquierda: Información */}
       <div className="md:w-1/4">
@@ -16,7 +17,7 @@ export const ContactForm = () => {
         <p className="text-gray-400 mb-4">
           Decime hola a{" "}
           <span className="text-white underline cursor-pointer">
-            mail@gmail.com
+            {info_personal.email}
           </span>
         </p>
 
@@ -87,7 +88,7 @@ export const ContactForm = () => {
         >
           {/* Campo Nombre */}
           <div className="flex flex-col gap-1">
-            <label className="text-gray-400 text-sm">Name</label>
+            <label className="text-gray-400 text-sm">Nombre</label>
             <input
               type="text"
               name="name"
@@ -98,7 +99,7 @@ export const ContactForm = () => {
 
           {/* Campo Email */}
           <div className="flex flex-col gap-1">
-            <label className="text-gray-400 text-sm">Email</label>
+            <label className="text-gray-400 text-sm">Correo electrónico</label>
             <input
               type="email"
               name="email"
@@ -109,7 +110,7 @@ export const ContactForm = () => {
 
           {/* Campo Asunto */}
           <div className="flex flex-col gap-1">
-            <label className="text-gray-400 text-sm">Subject</label>
+            <label className="text-gray-400 text-sm">Asunto</label>
             <input
               type="text"
               name="subject"
@@ -119,7 +120,7 @@ export const ContactForm = () => {
 
           {/* Campo Mensaje */}
           <div className="flex flex-col gap-1">
-            <label className="text-gray-400 text-sm">Message</label>
+            <label className="text-gray-400 text-sm">Mensaje</label>
             <textarea
               name="message"
               rows="4"
@@ -133,7 +134,7 @@ export const ContactForm = () => {
             type="submit"
             className=" cursor-pointer bg-(--acento-color) text-black font-bold py-3 px-8 rounded-full w-fit mt-4 hover:bg-(--acento-color-hover) transition-colors uppercase"
           >
-            Submit
+            Enviar
           </button>
         </form>
       </div>

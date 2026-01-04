@@ -2,17 +2,6 @@ const nombre = "Nombre Apellido";
 
 export { nombre };
 
-const habilidades = [
-  "JavaScript",
-  "React",
-  "Node.js",
-  "HTML & CSS",
-  "Git & GitHub",
-  "Java",
-  "Spring Boot",
-];
-
-export { habilidades };
 
 const experiencia = [
   {
@@ -46,14 +35,42 @@ const links_proyectos = {
 
 export { links_proyectos };
 
+
+// Información personal//
+const info_personal={
+  nombre_completo: "Nombre Apellido",
+  titulo_profesional: "Desarrollador Full Stack",
+  ubicacion: "Ciudad, País",
+  email: "correopropio@gmail.com",
+  telefono: "+123 456 7890",
+};
+
+export { info_personal };
+
+const habilidades = [
+  "JavaScript",
+  "React",
+  "Node.js",
+  "HTML & CSS",
+  "Git & GitHub",
+  "Java",
+  "Spring Boot",
+];
+
+export { habilidades };
+
+
+// Información de proyectos //
 const proyectos = [
   {
     title: "MetaMapa",
-    description: "El sistema donde cada hecho cuenta",
+    description: "MetaMapa es una plataforma colaborativa diseñada para la gestión y visualización geográfica de eventos o hechos históricos y culturales. El sistema permite a los usuarios explorar contenidos mediante un mapa interactivo y organizar la información en colecciones temáticas.",
+    anio : 2024,
+    rol: "Desarrollador Full Stack",
     image: "/assets/img/projects/metamapa.png",
     link: "/projects/proyecto1",
     github: "https://github.com",
-    tecnologies: ["java","springboot","mysql","hibernate","html5","css3", "github", "thymeleaf",],
+    tecnologies: ["java","springboot","mysql","hibernate","html5","css3", "thymeleaf",],
   },
   {
     title: "Otro Proyecto",

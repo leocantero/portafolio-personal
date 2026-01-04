@@ -1,49 +1,23 @@
 import React from "react";
 import { nombre } from "../data/data.js";
+import { info_personal } from "../data/data.js";
 
 export const Footer = () => {
   const year = new Date().getFullYear();
 
   return (
     <footer className="w-full border-t border-white/10">
-      <div className="mx-auto max-w-6xl px-4 py-8 flex flex-col gap-6 md:flex-row md:items-center md:justify-between">
-        <div className="space-y-1">
-          <h2 className="text-base font-semibold montserrat-title-bold">
-            {nombre}
+      <div className="mx-auto max-w-6xl px-4 py-8 flex flex-col gap-6 flex-col items-center justify-center gap-6 text-center">
+        <div className="space-y-1 ">
+          <h2 className="text-base font-semibold montserrat-title-bold text-white uppercase tracking-wider">
+            {info_personal.nombre_completo}
           </h2>
-          <p className="text-sm text-(--text-color-secondary)">
-            © {year} {nombre}. Todos los derechos reservados.
+          <p className="text-sm text-(--text-color-secondary) opacity-70 montserrat-title">
+            © {year} {info_personal.nombre_completo}. Todos los derechos reservados.
           </p>
         </div>
 
-        <nav
-          aria-label="Enlaces"
-          className="flex flex-wrap items-center gap-x-6 gap-y-2 text-sm"
-        >
-          <a href="/" className="transition-colors hover:text-(--acento-color)">
-            Inicio
-          </a>
-          <a
-            href="/about"
-            className="transition-colors hover:text-(--acento-color)"
-          >
-            Acerca de mí
-          </a>
-          <a
-            href="#proyectos"
-            className="transition-colors hover:text-(--acento-color)"
-          >
-            Proyectos
-          </a>
-          <a
-            href="#contacto"
-            className="transition-colors hover:text-(--acento-color)"
-          >
-            Contacto
-          </a>
-        </nav>
-
-        <div className="flex items-center gap-4">
+        <div className="flex items-center gap-5 justify-center">
           <a
             href="https://github.com/leocantero"
             target="_blank"
