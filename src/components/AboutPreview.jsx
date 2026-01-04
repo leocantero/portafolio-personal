@@ -1,6 +1,8 @@
     import React from "react";
     import { useNavigate } from "react-router-dom";
+    import { info_personal } from "../data/data.js";
     import { nombre } from "../data/data.js";
+
 
     export const AboutPreview = () => {
         const navigate = useNavigate();
@@ -15,10 +17,10 @@
                     </div>
                     <div>
                         <h3 className="text-4xl text-(--acento-color) font-bold montserrat-title-bold uppercase w-5xl mb-4">
-                            Breve descripción
+                            Quién soy y qué hago
                         </h3>
                         <p className="">
-                            Soy un desarrollador frontend enfocado en crear interfaces modernas, claras y accesibles. Me interesa especialmente construir experiencias que no solo se vean bien, sino que también sean intuitivas y fáciles de usar. Disfruto trabajar con tecnologías como React y Tailwind CSS, cuidando tanto la estructura del código como los detalles visuales. Siempre busco aprender algo nuevo y mejorar mis habilidades a través de proyectos reales y desafíos constantes.
+                            {info_personal.descripcion}
                         </p>
                         <button className="bg-(--acento-color) text-black uppercase px-6 py-3 rounded-full hover:bg-(--acento-color-hover) transition-all duration-300 ease-in-out mt-4 cursor-pointer"
                                 onClick={() => navigate("/about")}

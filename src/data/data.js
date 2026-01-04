@@ -25,6 +25,8 @@ export { experiencia };
 const links_contacto = {
   github: "https://github.com",
   linkedin: "https://linkedin.com",
+  whatsapp: "https://wa.me/1234567890",
+  mail: "mailto:hola@gmail.com",
 };
 
 export { links_contacto };
@@ -39,10 +41,12 @@ export { links_proyectos };
 // Información personal//
 const info_personal={
   nombre_completo: "Nombre Apellido",
+  introduccion : "Pequeña introducción sobre mí",
+  descripcion: "Soy un desarrollador apasionado por la tecnología y el desarrollo de software. Me especializo en crear aplicaciones web eficientes y escalables, siempre buscando aprender nuevas tecnologías y mejorar mis habilidades.",
   titulo_profesional: "Desarrollador Full Stack",
   ubicacion: "Ciudad, País",
   email: "correopropio@gmail.com",
-  telefono: "+123 456 7890",
+  telefono: "+1234567890",
 };
 
 export { info_personal };

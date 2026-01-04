@@ -29,7 +29,7 @@ export const Hero = () => {
           </h2>
 
           <p className="max-md:text-base opacity-80">
-            Pequeña introducción sobre mí y lo que hago.
+            {info_personal.introduccion}
           </p>
 
           {/* Centramos los botones en mobile con 'max-md:justify-center' */}

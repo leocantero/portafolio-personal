@@ -1,5 +1,6 @@
 import React from "react";
 import { info_personal } from "../data/data";
+import { links_contacto } from "../data/data";
 
 export const ContactForm = () => {
   const FORMSPREE_URL = import.meta.env.VITE_FORMSPREE_URL;
@@ -15,14 +16,15 @@ export const ContactForm = () => {
           Contactate
         </h2>
         <p className="text-gray-400 mb-4">
-          Decime hola a{" "}
+          Informacion de contacto {" "}
           <span className="text-white underline cursor-pointer">
             {info_personal.email}
           </span>
         </p>
+        <a className = "text-white underline cursor-pointer" href={links_contacto.whatsapp}>{info_personal.telefono}</a>
 
         {/* Iconos Redes Sociales */}
-        <div className="flex items-center gap-4">
+        <div className="flex items-center gap-4 my-4">
           <a
             href="https://github.com/leocantero"
             target="_blank"
