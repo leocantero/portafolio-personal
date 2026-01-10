@@ -9,9 +9,9 @@ export const Habilidades = () => {
     <>
       <section
         id="habilidades"
-        className="mx-auto max-w-6xl px-4"
+        className="mx-auto max-w-6xl px-4 scroll-mt-[10vh]"
       >
-        <div className="grid gap-4 md:grid-cols-3 md:items-start mx-auto max-w-6xl scroll-mt-[10vh]">
+        <div className="grid gap-4 md:grid-cols-3 md:items-start mx-auto max-w-6xl">
           <h2 className="text-4xl lg:text-5xl font-bold montserrat-title-bold uppercase">
             Habilidades
           </h2>
