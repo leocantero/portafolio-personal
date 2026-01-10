@@ -11,8 +11,8 @@ export const Habilidades = () => {
         id="habilidades"
         className="mx-auto max-w-6xl px-4"
       >
-        <div className="grid gap-8 md:grid-cols-3 md:items-start mx-auto max-w-6xl scroll-mt-[10vh]">
-          <h2 className="text-5xl font-bold montserrat-title-bold uppercase">
+        <div className="grid gap-4 md:grid-cols-3 md:items-start mx-auto max-w-6xl scroll-mt-[10vh]">
+          <h2 className="text-4xl lg:text-5xl font-bold montserrat-title-bold uppercase">
             Habilidades
           </h2>
           <div className="md:col-span-2">
@@ -21,10 +21,10 @@ export const Habilidades = () => {
               actualizado con las tendencias de la industria. Algunas de mis
               habilidades incluyen:
             </p>
-            <ul className="grid grid-cols-4 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-5 gap-3">
+            <ul className="grid grid-cols-2 md:!grid-cols-4 lg:grid-cols-5 gap-3">
               {habilidades.map((habilidad, index) => (
                 <li key={`${habilidad}-${index}`}>
-                  <div className="group flex items-center justify-center gap-2 rounded-xl border border-white/5 ring-1 ring-white/10 px-3 py-2 md:px-4 md:py-3 transition-all duration-200 hover:bg-white/10 hover:ring-(--acento-color) hover:-translate-y-0.5">
+                  <div className="group flex items-center justify-center gap-2 rounded-xl border border-white/5 ring-1 ring-white/10 px-3 py-2 md:px-4 md:py-3 transition-all duration-200 hover:bg-white/10 hover:ring-(--acento-color) hover:-translate-y-0.5 h-full">
                     <svg
                       xmlns="http://www.w3.org/2000/svg"
                       viewBox="0 0 24 24"

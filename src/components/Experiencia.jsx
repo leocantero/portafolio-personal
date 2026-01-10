@@ -7,7 +7,7 @@ export const Experiencia = () => {
   return (
     <>
      <section id="experiencia" 
-     className="max-w-11/12 mx-auto px-4 flex flex-col md:flex-row justify-between items-top gap-16 scroll-mt-[10vh]">
+     className="max-w-11/12 mx-auto px-4 flex flex-col md:flex-row justify-between items-top gap-4 scroll-mt-[10vh]">
             <h2 className="text-4xl lg:text-5xl font-bold montserrat-title-bold uppercase lg:w-5xl">
               Experiencia
             </h2>
