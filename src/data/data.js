@@ -41,7 +41,7 @@ export { links_proyectos };
 // Información personal//
 const info_personal={
   nombre_completo: "Nombre Apellido",
-  introduccion : "Pequeña introducción sobre mí",
+  introduccion : "Pequeña introducción sobre mí. Acá es donde cuento acerca de mí mismo y mis intereses profesionales. Me encanta desarrollar soluciones innovadoras y aprender nuevas tecnologías. Además, disfruto trabajar en equipo y enfrentar desafíos técnicos.",
   descripcion: "Soy un desarrollador apasionado por la tecnología y el desarrollo de software. Me especializo en crear aplicaciones web eficientes y escalables, siempre buscando aprender nuevas tecnologías y mejorar mis habilidades.",
   titulo_profesional: "Desarrollador Full Stack",
   ubicacion: "Ciudad, País",

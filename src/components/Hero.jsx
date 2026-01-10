@@ -15,7 +15,7 @@ export const Hero = () => {
         pt-10 pb-14
         lg:pt-0 lg:pb-0 lg:min-h-[100svh]
         items-center gap-10 lg:gap-16
-        flex flex-col lg:flex-row
+        grid grid-cols-1 md:!grid-cols-2
       ">
         {/* TEXTO + BOTONES (izquierda en desktop) */}
         <div className="order-1 lg:order-1 text-left">
@@ -66,6 +66,7 @@ export const Hero = () => {
             rounded-[32px] lg:rounded-[48px]
             overflow-hidden
             w-full max-w-[520px]
+            h-full
             h-[38vh] sm:h-[44vh] lg:h-[80vh]
             bg-(--background-color-secondary)
           ">
