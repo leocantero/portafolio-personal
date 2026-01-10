@@ -1,7 +1,6 @@
 import React from "react";
 import { useNavigate } from "react-router-dom";
-import { info_personal } from "../data/data.js";
-import { links_contacto } from "../data/data.js";
+import { info_personal, links_contacto } from "../data/data.js";
 import githubIcon from "../assets/github.svg";
 import linkedinIcon from "../assets/linkedin.svg";
 import heroImage from "../assets/about-image.jpg";
@@ -11,29 +10,45 @@ export const Hero = () => {
 
   return (
     <section className="bg-(--fondo-color) text-(--texto-color) montserrat-title-light">
-      {/* MODIFICACIÓN 1: 
-        - Mantenemos 'grid-cols-2' para PC.
-        - Agregamos 'max-md:grid-cols-1' para que en móvil sea una sola columna.
-        - Cambiamos 'h-screen' por 'max-md:h-auto' y 'max-md:py-12' para que el contenido no se corte en móviles.
+      {/* 
+        Mobile-first:
+        - 1 columna por defecto
+        - 2 columnas en lg+
+        - min-h con 100svh para evitar bugs de mobile browser UI
       */}
-      <div className="mx-auto max-w-6xl px-6 h-screen grid grid-cols-2 items-center gap-16 max-md:grid-cols-1 max-md:h-auto max-md:py-12 max-md:gap-8">
+      <div className="mx-auto max-w-6xl px-6 pt-10 pb-14 lg:pt-0 lg:pb-0 lg:min-h-[100svh] grid grid-cols-1 lg:grid-cols-2 items-center gap-10 lg:gap-16">
 
-        {/* COLUMNA TEXTO 
-            MODIFICACIÓN 2:
-            - Agregamos 'max-md:order-2' para que el texto aparezca DEBAJO de la foto en móvil.
-            - Agregamos 'max-md:text-center' para mejorar la lectura axial en celulares.
-        */}
-        <div className="max-md:order-2 max-md:text-center">
-          <h2 className="text-5xl font-bold mb-4 uppercase max-md:text-3xl">
+        {/* IMAGEN (arriba en mobile, derecha en desktop) */}
+        <div className="flex justify-center lg:justify-end order-2 lg:order-2">
+          <div
+            className="
+              rounded-[32px] lg:rounded-[48px]
+              overflow-hidden
+              w-full max-w-[520px]
+              h-[38vh] sm:h-[44vh] lg:h-[80vh]
+              bg-(--background-color-secondary)
+            "
+          >
+            <img
+              src={heroImage}
+              alt="me"
+              className="w-full h-full object-cover"
+            />
+          </div>
+        </div>
+
+        {/* TEXTO (abajo en mobile, izquierda en desktop) */}
+        <div className="order- lg:order-1 text-left lg:text-left">
+          <h2 className="uppercase font-bold mb-4 text-3xl sm:text-4xl lg:text-5xl">
             Hola, soy {info_personal.nombre_completo}.
           </h2>
 
-          <p className="max-md:text-base opacity-80">
+          <p className="opacity-80 text-base sm:text-lg max-w-xl">
             {info_personal.introduccion}
           </p>
 
-          {/* Centramos los botones en mobile con 'max-md:justify-center' */}
-          <div className="mt-8 flex items-center gap-4 max-md:justify-center">
+          {/* CTAs */}
+          <div className="mt-8 flex flex-col sm:flex-row items-stretch sm:items-center gap-4">
             <button
               className="bg-(--acento-color) text-black uppercase px-6 py-3 rounded-full hover:bg-(--acento-color-hover) transition-all duration-300 ease-in-out cursor-pointer font-bold"
               onClick={() => {
@@ -44,37 +59,37 @@ export const Hero = () => {
               Contactame
             </button>
 
-            <a
-              href={links_contacto.linkedin}
-              target="_blank"
-              rel="noopener noreferrer"
-              className="inline-flex items-center justify-center w-12 h-12 rounded-full bg-(--background-color-secondary) transition-all duration-300 hover:scale-110"
-            >
-              <img src={linkedinIcon} alt="linkedin" className="w-8 h-8" />
-            </a>
+            <div className="flex items-center justify-start gap-4">
+              <a
+                href={links_contacto.linkedin}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="inline-flex items-center justify-center w-12 h-12 rounded-full bg-(--background-color-secondary) transition-all duration-300 hover:scale-110"
+              >
+                <img src={linkedinIcon} alt="linkedin" className="w-8 h-8" />
+              </a>
 
-            <a
-              href={links_contacto.github}
-              target="_blank"
-              rel="noopener noreferrer"
-              className="inline-flex items-center justify-center w-12 h-12 rounded-full bg-(--background-color-secondary) transition-all duration-300 hover:scale-110"
-            >
-              <img src={githubIcon} alt="github" className="w-8 h-8" />
-            </a>
+              <a
+                href={links_contacto.github}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="inline-flex items-center justify-center w-12 h-12 rounded-full bg-(--background-color-secondary) transition-all duration-300 hover:scale-110"
+              >
+                <img src={githubIcon} alt="github" className="w-8 h-8" />
+              </a>
+            </div>
           </div>
-        </div>
 
-        {/* COLUMNA IMAGEN 
-            MODIFICACIÓN 3:
-            - Agregamos 'max-md:order-1' para que la foto aparezca ARRIBA en el celular.
-            - Ajustamos 'max-md:h-[40vh]' para que la imagen no ocupe toda la pantalla del móvil.
-        */}
-        <div className="flex justify-center max-md:order-1">
-          <div className="rounded-[48px] overflow-hidden w-auto h-[80vh] flex items-end justify-center bg-(--background-color-secondary) max-md:h-[40vh] max-md:w-full max-md:rounded-[32px]">
-            <img src={heroImage} alt="me" className="h-full object-cover" />
-          </div>
+          {/* Si querés, un CTA secundario (opcional) */}
+          {/* 
+          <button
+            className="mt-6 text-sm opacity-80 hover:opacity-100 underline"
+            onClick={() => navigate("/proyectos")}
+          >
+            Ver proyectos →
+          </button> 
+          */}
         </div>
-
       </div>
     </section>
   );

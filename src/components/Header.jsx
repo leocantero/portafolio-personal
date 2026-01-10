@@ -36,7 +36,7 @@ export const Header = () => {
   return (
     <>
       {/* HEADER SUPERIOR */}
-      <header className="fixed top-0 left-0 z-[9999] w-full bg-(--fondo-color)">
+      <header className="fixed top-0 left-0 z-[9999] w-full bg-(--background-color-secondary)">
         <div className="mx-auto max-w-7xl px-6 md:px-20 py-4 flex items-center justify-between">
           {/* Mobile button */}
           <button
@@ -61,7 +61,7 @@ export const Header = () => {
           </h2>
 
           {/* Desktop nav */}
-          <ul className="hidden md:flex gap-8">
+          <ul className="hidden lg:flex gap-8">
             {sections.map((item) => (
               <li
                 key={item.id}
@@ -94,7 +94,7 @@ export const Header = () => {
         {/* Drawer arriba */}
         <aside
           className={`absolute left-0 top-0 h-full w-72 z-10
-          bg-black text-white px-6 py-6
+          bg-(--background-color-secondary) text-white px-6 py-6
           transition-transform duration-300 ${
             open ? "translate-x-0" : "-translate-x-full"
           }`}
