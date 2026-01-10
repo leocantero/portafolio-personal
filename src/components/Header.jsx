@@ -36,7 +36,7 @@ export const Header = () => {
   return (
     <>
       {/* HEADER SUPERIOR */}
-      <header className="fixed top-0 left-0 z-[9999] w-full bg-(--background-color-secondary)">
+      <header className="fixed top-0 left-0 z-[9998] w-full bg-(--background-color-secondary)">
         <div className="mx-auto max-w-7xl px-6 md:px-20 py-4 flex items-center justify-between">
           {/* Mobile button */}
           <button
@@ -52,32 +52,32 @@ export const Header = () => {
 
           {/* Ocultamos el nombre cuando el menú está abierto en mobile para evitar duplicado visual */}
           <h2
-            className={`cursor-pointer text-xl font-bold montserrat-title-bold uppercase ${
-              open ? "md:block hidden" : ""
-            }`}
+            className="cursor-pointer text-xl font-bold montserrat-title-bold uppercase"
             onClick={() => navigate("/")}
           >
             {nombre}
           </h2>
 
           {/* Desktop nav */}
-          <ul className="hidden lg:flex gap-8">
-            {sections.map((item) => (
-              <li
-                key={item.id}
-                className="cursor-pointer hover:text-(--acento-color) transition-all duration-300 ease-in-out hover:drop-shadow-[0_0_10px_rgba(255,255,255,0.8)]"
-                onClick={() => scrollTo(item.id)}
-              >
-                {item.label}
-              </li>
-            ))}
-          </ul>
+          <nav className="hidden md:!flex items-center justify-end gap-8"> 
+            <ul className="flex gap-8 list-none">
+              {sections.map((item) => (
+                <li
+                  key={item.id}
+                  className="cursor-pointer text-white hover:text-(--acento-color) transition-all duration-300 uppercase text-sm"
+                  onClick={() => scrollTo(item.id)}
+                >
+                  {item.label}
+                </li>
+              ))}
+            </ul>
+          </nav>
         </div>
       </header>
 
       {/* SIDEBAR MOBILE (wrapper fijo) */}
       <div
-        className={`fixed inset-0 md:hidden z-[9998] ${
+        className={`fixed inset-0 md:hidden z-[9999] ${
           open ? "pointer-events-auto" : "pointer-events-none"
         }`}
       >

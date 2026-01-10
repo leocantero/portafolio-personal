@@ -10,35 +10,15 @@ export const Hero = () => {
 
   return (
     <section className="bg-(--fondo-color) text-(--texto-color) montserrat-title-light">
-      {/* 
-        Mobile-first:
-        - 1 columna por defecto
-        - 2 columnas en lg+
-        - min-h con 100svh para evitar bugs de mobile browser UI
-      */}
-      <div className="mx-auto max-w-6xl px-6 pt-10 pb-14 lg:pt-0 lg:pb-0 lg:min-h-[100svh] grid grid-cols-1 lg:grid-cols-2 items-center gap-10 lg:gap-16">
-
-        {/* IMAGEN (arriba en mobile, derecha en desktop) */}
-        <div className="flex justify-center lg:justify-end order-2 lg:order-2">
-          <div
-            className="
-              rounded-[32px] lg:rounded-[48px]
-              overflow-hidden
-              w-full max-w-[520px]
-              h-[38vh] sm:h-[44vh] lg:h-[80vh]
-              bg-(--background-color-secondary)
-            "
-          >
-            <img
-              src={heroImage}
-              alt="me"
-              className="w-full h-full object-cover"
-            />
-          </div>
-        </div>
-
-        {/* TEXTO (abajo en mobile, izquierda en desktop) */}
-        <div className="order- lg:order-1 text-left lg:text-left">
+      <div className="
+        mx-auto max-w-6xl px-6
+        pt-10 pb-14
+        lg:pt-0 lg:pb-0 lg:min-h-[100svh]
+        items-center gap-10 lg:gap-16
+        flex flex-col lg:flex-row
+      ">
+        {/* TEXTO + BOTONES (izquierda en desktop) */}
+        <div className="order-1 lg:order-1 text-left">
           <h2 className="uppercase font-bold mb-4 text-3xl sm:text-4xl lg:text-5xl">
             Hola, soy {info_personal.nombre_completo}.
           </h2>
@@ -47,7 +27,6 @@ export const Hero = () => {
             {info_personal.introduccion}
           </p>
 
-          {/* CTAs */}
           <div className="mt-8 flex flex-col sm:flex-row items-stretch sm:items-center gap-4">
             <button
               className="bg-(--acento-color) text-black uppercase px-6 py-3 rounded-full hover:bg-(--acento-color-hover) transition-all duration-300 ease-in-out cursor-pointer font-bold"
@@ -79,16 +58,19 @@ export const Hero = () => {
               </a>
             </div>
           </div>
+        </div>
 
-          {/* Si querés, un CTA secundario (opcional) */}
-          {/* 
-          <button
-            className="mt-6 text-sm opacity-80 hover:opacity-100 underline"
-            onClick={() => navigate("/proyectos")}
-          >
-            Ver proyectos →
-          </button> 
-          */}
+        {/* IMAGEN (derecha en desktop) */}
+        <div className="order-2 lg:order-2 flex justify-center lg:justify-end">
+          <div className="
+            rounded-[32px] lg:rounded-[48px]
+            overflow-hidden
+            w-full max-w-[520px]
+            h-[38vh] sm:h-[44vh] lg:h-[80vh]
+            bg-(--background-color-secondary)
+          ">
+            <img src={heroImage} alt="me" className="w-full h-full object-cover" />
+          </div>
         </div>
       </div>
     </section>
